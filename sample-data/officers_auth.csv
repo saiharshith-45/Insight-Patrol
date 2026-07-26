@@ -1,0 +1,9 @@
+officer_id,username,password,rank,name,unit,role_key,can_assign,can_patrol_plan,can_investigate,can_patrol
+OFF-DYSP-01,dysp.ramesh,Ksp@2026,DySP,V. Ramesh,Bengaluru East Sub-Division,dysp-east,true,true,true,true
+OFF-CI-01,ci.deepa,Ksp@2026,Circle Inspector,M. Deepa,Bengaluru East Circle,ci-east,true,true,true,true
+OFF-SHO-01,sho.prakash,Ksp@2026,Inspector / SHO,K. Prakash,Whitefield Police Station,sho-whitefield,true,true,true,true
+OFF-PSI-01,psi.naveen,Ksp@2026,PSI,A. Naveen,"Cyber Crime PS, Bengaluru City",psi-io-cyber,false,false,true,false
+OFF-PSI-02,psi.kavitha,Ksp@2026,PSI,S. Kavitha,Indiranagar PS,psi-io-indira,false,false,true,false
+OFF-ASI-01,asi.mahesh,Ksp@2026,ASI,R. Mahesh,"Cyber Crime PS, Bengaluru City",asi-ccps,false,false,true,false
+OFF-HC-01,hc.sunil,Ksp@2026,Head Constable,Sunil B,Indiranagar PS — Beat 3,patrol-hc,false,false,false,true
+OFF-PC-01,pc.anand,Ksp@2026,Police Constable,Anand P,Whitefield PS — Night Patrol,patrol-pc,false,false,false,true

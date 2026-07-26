@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "insight_patrol_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

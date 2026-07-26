@@ -1,0 +1,47 @@
+crime_id,crime_type,location,crime_date,severity,station_code,station_name,locality,fir_no,status,modus,section_hint
+C0001,CYBER,BENGALURU,2026-07-05 00:00:00,HIGH,CCPS-BLR,"Cyber Crime Police Station, Bengaluru City",Indiranagar 100 Feet Road,2026/CCPSBL/0100,Charge Sheet Filed,UPI phishing via fake bank SMS,IT Act / IPC 420
+C0002,CYBER,BENGALURU,2026-07-06 00:00:00,HIGH,INDIRANAGAR-PS,Indiranagar Police Station,Whitefield ITPL Road,2026/INDIRA/0101,Under Investigation,OTP fraud on customer care call,IT Act / IPC 420
+C0003,CYBER,BENGALURU,2026-07-07 00:00:00,MEDIUM,WHITEFIELD-PS,Whitefield Police Station,Koramangala 5th Block,2026/WHITEF/0102,Under Investigation,Investment app scam,IT Act / IPC 420
+C0004,CYBER,BENGALURU,2026-06-08 00:00:00,HIGH,KG HALLI-PS,K.G. Halli Police Station,Indiranagar 100 Feet Road,2026/KGHALL/0103,Under Investigation,Fake KYC WhatsApp link,IT Act / IPC 420
+C0005,CYBER,BENGALURU,2026-06-09 00:00:00,MEDIUM,JAYANAGAR-PS,Jayanagar Police Station,Electronic City Phase 1,2026/JAYANA/0104,Under Investigation,Job offer advance fee fraud,IT Act / IPC 420
+C0006,CYBER,BENGALURU,2026-06-10 00:00:00,HIGH,YELAHANKA-PS,Yelahanka Police Station,MG Road,2026/YELAHA/0105,Charge Sheet Filed,SIM swap leading to account drain,IT Act / IPC 420
+C0007,CYBER,BENGALURU,2026-05-11 00:00:00,MEDIUM,CCPS-BLR,"Cyber Crime Police Station, Bengaluru City",Whitefield ITPL Road,2026/CCPSBL/0106,Under Investigation,UPI phishing via fake bank SMS,IT Act / IPC 420
+C0008,CYBER,BENGALURU,2026-05-12 00:00:00,HIGH,INDIRANAGAR-PS,Indiranagar Police Station,Yelahanka New Town,2026/INDIRA/0107,Under Investigation,OTP fraud on customer care call,IT Act / IPC 420
+C0009,CYBER,BENGALURU,2026-05-13 00:00:00,LOW,WHITEFIELD-PS,Whitefield Police Station,Koramangala 5th Block,2026/WHITEF/0108,Under Investigation,Investment app scam,IT Act / IPC 420
+C0010,CYBER,BENGALURU,2026-04-14 00:00:00,HIGH,KG HALLI-PS,K.G. Halli Police Station,Indiranagar 100 Feet Road,2026/KGHALL/0109,Under Investigation,Fake KYC WhatsApp link,IT Act / IPC 420
+C0011,CYBER,BENGALURU,2026-04-15 00:00:00,MEDIUM,JAYANAGAR-PS,Jayanagar Police Station,Electronic City Phase 1,2026/JAYANA/0110,Charge Sheet Filed,Job offer advance fee fraud,IT Act / IPC 420
+C0012,CYBER,BENGALURU,2026-04-16 00:00:00,MEDIUM,YELAHANKA-PS,Yelahanka Police Station,MG Road,2026/YELAHA/0111,Under Investigation,SIM swap leading to account drain,IT Act / IPC 420
+C0013,CYBER,BENGALURU,2026-03-17 00:00:00,HIGH,CCPS-BLR,"Cyber Crime Police Station, Bengaluru City",Whitefield ITPL Road,2026/CCPSBL/0112,Under Investigation,UPI phishing via fake bank SMS,IT Act / IPC 420
+C0014,CYBER,BENGALURU,2026-03-18 00:00:00,MEDIUM,INDIRANAGAR-PS,Indiranagar Police Station,Yelahanka New Town,2026/INDIRA/0113,Under Investigation,OTP fraud on customer care call,IT Act / IPC 420
+C0015,CYBER,BENGALURU,2026-03-19 00:00:00,LOW,WHITEFIELD-PS,Whitefield Police Station,Koramangala 5th Block,2026/WHITEF/0114,Under Investigation,Investment app scam,IT Act / IPC 420
+C0016,CYBER,BENGALURU,2026-02-20 00:00:00,HIGH,KG HALLI-PS,K.G. Halli Police Station,Indiranagar 100 Feet Road,2026/KGHALL/0115,Charge Sheet Filed,Fake KYC WhatsApp link,IT Act / IPC 420
+C0017,CYBER,BENGALURU,2026-02-21 00:00:00,HIGH,JAYANAGAR-PS,Jayanagar Police Station,Electronic City Phase 1,2026/JAYANA/0116,Under Investigation,Job offer advance fee fraud,IT Act / IPC 420
+C0018,CYBER,BENGALURU,2026-02-22 00:00:00,MEDIUM,YELAHANKA-PS,Yelahanka Police Station,MG Road,2026/YELAHA/0117,Under Investigation,SIM swap leading to account drain,IT Act / IPC 420
+C0019,CYBER,BENGALURU,2026-02-23 00:00:00,LOW,CCPS-BLR,"Cyber Crime Police Station, Bengaluru City",Whitefield ITPL Road,2026/CCPSBL/0118,Under Investigation,UPI phishing via fake bank SMS,IT Act / IPC 420
+C0020,CYBER,BENGALURU,2026-02-24 00:00:00,HIGH,INDIRANAGAR-PS,Indiranagar Police Station,Yelahanka New Town,2026/INDIRA/0119,Under Investigation,OTP fraud on customer care call,IT Act / IPC 420
+C0021,THEFT,BENGALURU,2026-06-08 00:00:00,HIGH,CCPS-BLR,"Cyber Crime Police Station, Bengaluru City",Indiranagar 12th Main,2026/CCPSBL/0120,Under Investigation,TWO-wheeler snatching,IPC 379 / 356
+C0022,THEFT,BENGALURU,2026-06-09 00:00:00,MEDIUM,INDIRANAGAR-PS,Indiranagar Police Station,Jayanagar 4th Block,2026/INDIRA/0121,Under Investigation,Mobile snatching,IPC 379 / 356
+C0023,THEFT,BENGALURU,2026-05-10 00:00:00,HIGH,WHITEFIELD-PS,Whitefield Police Station,MG Road metro exit,2026/WHITEF/0122,Under Investigation,Chain snatching,IPC 379 / 356
+C0024,THEFT,BENGALURU,2026-05-11 00:00:00,MEDIUM,KG HALLI-PS,K.G. Halli Police Station,Koramangala Forum Mall area,2026/KGHALL/0123,Under Investigation,Vehicle theft,IPC 379 / 356
+C0025,THEFT,BENGALURU,2026-04-12 00:00:00,LOW,JAYANAGAR-PS,Jayanagar Police Station,Yelahanka NES Road,2026/JAYANA/0124,Under Investigation,Bicycle / mobile theft,IPC 379 / 356
+C0026,THEFT,BENGALURU,2026-03-13 00:00:00,MEDIUM,YELAHANKA-PS,Yelahanka Police Station,Whitefield main road,2026/YELAHA/0125,Under Investigation,Chain snatching,IPC 379 / 356
+C0027,ASSAULT,BENGALURU,2026-05-12 00:00:00,HIGH,INDIRANAGAR-PS,Indiranagar Police Station,Shivajinagar,2026/INDIRA/0126,Under Investigation,Physical assault / quarrel,IPC 323 / 324
+C0028,ASSAULT,BENGALURU,2026-04-12 00:00:00,MEDIUM,WHITEFIELD-PS,Whitefield Police Station,K.G. Halli,2026/WHITEF/0127,Under Investigation,Physical assault / quarrel,IPC 323 / 324
+C0029,ASSAULT,BENGALURU,2026-02-12 00:00:00,HIGH,KG HALLI-PS,K.G. Halli Police Station,Hebbal,2026/KGHALL/0128,Under Investigation,Physical assault / quarrel,IPC 323 / 324
+C0030,FRAUD,MYSURU,2026-06-14 00:00:00,MEDIUM,NAZARABAD-PS,Nazarabad Police Station,Nazarabad,2026/NAZARA/0129,Under Investigation,Cheating / fake document,IPC 420
+C0031,FRAUD,BENGALURU,2026-05-14 00:00:00,HIGH,INDIRANAGAR-PS,Indiranagar Police Station,Commercial Street,2026/INDIRA/0130,Under Investigation,Cheating / fake document,IPC 420
+C0032,FRAUD,MYSURU,2026-03-14 00:00:00,MEDIUM,NAZARABAD-PS,Nazarabad Police Station,V.V. Puram,2026/NAZARA/0131,Under Investigation,Cheating / fake document,IPC 420
+C0033,CYBER,MYSURU,2026-04-07 00:00:00,LOW,NAZARABAD-PS,Nazarabad Police Station,Nazarbad circle,2026/NAZARA/0132,Under Investigation,Online shopping fraud,IT Act
+C0034,THEFT,MANGALURU,2026-05-09 00:00:00,MEDIUM,PANDESHWAR-PS,Pandeshwar Police Station,Pandeshwar harbour road,2026/PANDES/0133,Under Investigation,Shop theft,IPC 379
+C0035,DRUG,HUBBALLI,2026-03-11 00:00:00,HIGH,HUBBALLI EAST-PS,Hubballi East Police Station,Hubballi East,2026/HUBBAL/0134,Charge Sheet Filed,NDPS recovery,NDPS Act
+C0036,ROBBERY,BELAGAVI,2026-05-16 00:00:00,HIGH,APMC-PS,"APMC Police Station, Belagavi",APMC yard,2026/APMCPS/0135,Under Investigation,Highway robbery,IPC 392
+C0037,THEFT,DAVANAGERE,2026-06-18 00:00:00,MEDIUM,DAVANAGERE EAST-PS,Davanagere East Police Station,Davanagere East,2026/DAVANA/0136,Under Investigation,House break,IPC 457 / 380
+C0038,MURDER,BENGALURU,2026-02-03 00:00:00,HIGH,KG HALLI-PS,K.G. Halli Police Station,K.G. Halli outskirts,2026/KGHALL/0137,Under Investigation,Homicide - under probe,IPC 302
+C0039,CYBER,BENGALURU,2026-07-20 00:00:00,HIGH,CCPS-BLR,"Cyber Crime Police Station, Bengaluru City",Indiranagar 100 Feet Road,2026/CCPSBL/0138,Open — Accused not identified,UPI phishing via fake bank SMS,IT Act
+C0040,CYBER,BENGALURU,2026-06-21 00:00:00,MEDIUM,INDIRANAGAR-PS,Indiranagar Police Station,Whitefield ITPL Road,2026/INDIRA/0139,Open — Accused not identified,OTP fraud on customer care call,IT Act
+C0041,CYBER,BENGALURU,2026-05-22 00:00:00,HIGH,WHITEFIELD-PS,Whitefield Police Station,Koramangala 5th Block,2026/WHITEF/0140,Open — Accused not identified,Investment app scam,IT Act
+C0042,CYBER,BENGALURU,2026-04-23 00:00:00,MEDIUM,KG HALLI-PS,K.G. Halli Police Station,Electronic City Phase 1,2026/KGHALL/0141,Open — Accused not identified,Fake KYC WhatsApp link,IT Act
+C0043,CYBER,BENGALURU,2026-07-24 00:00:00,HIGH,JAYANAGAR-PS,Jayanagar Police Station,MG Road,2026/JAYANA/0142,Open — Accused not identified,Job offer advance fee fraud,IT Act
+C0044,CYBER,BENGALURU,2026-06-25 00:00:00,MEDIUM,YELAHANKA-PS,Yelahanka Police Station,Yelahanka New Town,2026/YELAHA/0143,Open — Accused not identified,SIM swap leading to account drain,IT Act
+C0045,CYBER,BENGALURU,2026-05-26 00:00:00,HIGH,CCPS-BLR,"Cyber Crime Police Station, Bengaluru City",Jayanagar 4th Block,2026/CCPSBL/0144,Open — Accused not identified,UPI phishing via fake bank SMS,IT Act
+C0046,CYBER,BENGALURU,2026-04-27 00:00:00,MEDIUM,INDIRANAGAR-PS,Indiranagar Police Station,Marathahalli Bridge,2026/INDIRA/0145,Open — Accused not identified,OTP fraud on customer care call,IT Act

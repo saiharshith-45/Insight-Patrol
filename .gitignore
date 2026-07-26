@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs / temp
+*.log
+npm-debug.log*
+.temp/
+.tmp/
+dist/
+build/
+.cache/
+
+# Catalyst local
+.catalystrc.bak
+*.zip
+
+# Local helper scripts (not needed in repo)
+client/_*.js
+
+# Large binary dumps if any
+*.mp4
+*.mov

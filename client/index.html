@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InsightPatrol — Officer Login</title>
+  <link rel="stylesheet" href="styles.css?v=prod19" />
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <div class="login-shell">
+      <aside class="login-logo-pane" aria-label="InsightPatrol brand">
+        <img class="login-logo-big" src="assets/logo.png" alt="InsightPatrol — A Look Into Intelligence" />
+      </aside>
+      <div class="login-form-pane">
+        <p class="login-kicker">Karnataka State Police · SCRB</p>
+        <h1 class="login-title">Officer sign-in</h1>
+        <p class="login-lead">Dashboard opens only after login.</p>
+        <form id="loginForm" class="login-form">
+          <label for="loginUser">Username</label>
+          <input id="loginUser" autocomplete="username" placeholder="e.g. psi.naveen" required />
+          <label for="loginPass">Password</label>
+          <input id="loginPass" type="password" autocomplete="current-password" required />
+          <button class="btn primary login-btn" type="submit">Sign in</button>
+        </form>
+        <p id="loginError" class="login-error hide"></p>
+        <details class="demo-box">
+          <summary>Demo logins</summary>
+          <p>Password: <code>Ksp@2026</code></p>
+          <ul>
+            <li><code>psi.naveen</code> — Investigating Officer</li>
+            <li><code>sho.prakash</code> — SHO (assign + field duty)</li>
+            <li><code>ci.deepa</code> — Circle Inspector</li>
+            <li><code>hc.sunil</code> — Head Constable (field)</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div id="appShell" class="shell hide">
+    <header class="top">
+      <div class="brand">
+        <img src="assets/logo.png" alt="InsightPatrol" />
+        <div>
+          <strong>INSIGHTPATROL</strong>
+          <span>Crime search · Case work · Field duty</span>
+        </div>
+      </div>
+      <div id="connBadge" class="badge">Connecting…</div>
+      <div class="top-right">
+        <div class="lang-switch" title="Answer language for all screens">
+          <button type="button" class="lang-btn active" data-lang="en">English</button>
+          <button type="button" class="lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+        </div>
+        <div class="officer-chip">
+          <div id="officerLine" class="officer-line">—</div>
+          <button type="button" class="btn ghost" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <p id="engineNote" class="engine-note">Ask in plain language. System uses <b>rule-based search + AI officer analysis</b> on FIR register and SCRB real district stats. Use English / ಕನ್ನಡ switch for reply language.</p>
+
+    <nav class="tabs" id="mainTabs">
+      <button type="button" class="tab active" data-tab="home">Home</button>
+      <button type="button" class="tab" data-tab="search" data-need="investigate">Search cases</button>
+      <button type="button" class="tab" data-tab="cases" data-need="investigate">Case work</button>
+      <button type="button" class="tab" data-tab="field">Patrol</button>
+      <button type="button" class="tab" data-tab="contacts">Contacts</button>
+      <button type="button" class="tab" data-tab="report" data-need="investigate">Daily report</button>
+    </nav>
+
+    <!-- HOME -->
+    <section id="tab-home" class="tab-panel active">
+      <div class="home-banner">
+        <h2 id="commandGreeting">Welcome</h2>
+        <p id="commandUnit" class="muted">Unit</p>
+      </div>
+      <div class="command-grid">
+        <div class="card">
+          <h2>Working case load (FIR register)</h2>
+          <label for="homeBriefPreset">Brief type</label>
+          <select id="homeBriefPreset">
+            <option value="cyber-blr">Cyber · Bengaluru (6 months)</option>
+            <option value="open-high">Open + HIGH · Bengaluru</option>
+            <option value="jayanagar-pending">Pending · Jayanagar PS</option>
+            <option value="indiranagar">Indiranagar PS load</option>
+            <option value="theft-blr">Theft · Bengaluru</option>
+            <option value="all-kn">All types · Karnataka (6 months)</option>
+          </select>
+          <div class="stats command-stats">
+            <div><b id="cmdMatches">—</b><span>Cases</span></div>
+            <div><b id="cmdHigh">—</b><span>HIGH</span></div>
+            <div><b id="cmdOpen">—</b><span>Open</span></div>
+            <div><b id="cmdRepeat">—</b><span>Repeat accused</span></div>
+          </div>
+          <div id="cmdSummary" class="summary">Loading today’s working snapshot…</div>
+          <button type="button" class="btn primary" id="cmdRefreshIntel">Refresh brief</button>
+          <p id="cmdRefreshMsg" class="muted"></p>
+        </div>
+        <div class="card">
+          <h2>SCRB state figures (real data)</h2>
+          <p class="muted">From Real-datasets 2024–2025 (district totals, not FIR names)</p>
+          <div class="stats command-stats">
+            <div><b id="scrbCyber">—</b><span>BLR cyber 2024</span></div>
+            <div><b id="scrbTheft">—</b><span>BLR theft 2024</span></div>
+            <div><b id="scrbIpc">—</b><span>BLR IPC 2025</span></div>
+            <div><b id="scrbSll">—</b><span>BLR SLL 2025</span></div>
+          </div>
+          <ul id="scrbTopList" class="list"></ul>
+        </div>
+        <div class="card">
+          <h2>What you can do</h2>
+          <ul id="permList" class="reasons"></ul>
+        </div>
+        <div class="card">
+          <h2>Open FIR in Case work</h2>
+          <input id="cmdFirJump" placeholder="Type FIR no. e.g. 2026/CCPSBL/0100" />
+          <button type="button" class="btn" id="cmdFirBtn">Open FIR</button>
+          <h3 style="margin-top:12px">Busy police stations</h3>
+          <ul id="cmdPatrolHints" class="list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH CASES -->
+    <section id="tab-search" class="tab-panel">
+      <div class="query-bar">
+        <form id="queryForm">
+          <input id="queryInput" placeholder="Ask in English or Kannada — answers follow the language switch above" required />
+          <button class="btn primary" type="submit">Search</button>
+        </form>
+        <div class="chips" id="quickChips">
+          <button type="button" data-q="Show cyber crime trends in Bengaluru in last 6 months">Cyber trends</button>
+          <button type="button" data-q="Saibar crime pravrutti Bengaluru kone 6 tingalu">Saibar pravrutti</button>
+          <button type="button" data-q="ಬೆಂಗಳೂರು ಸೈಬರ್ ಹಾಟ್ ಸ್ಪಾಟ್">ಕನ್ನಡ ಹಾಟ್‌ಸ್ಪಾಟ್</button>
+          <button type="button" data-q="Repeat offenders cyber Bengaluru">Repeat accused</button>
+        </div>
+      </div>
+
+      <div class="view-btns" id="viewBtns">
+        <button type="button" class="btn active" data-action="trend">Trend</button>
+        <button type="button" class="btn" data-action="hotspot">PS hotspots</button>
+        <button type="button" class="btn" data-action="links">Linked accused</button>
+        <button type="button" class="btn" data-action="repeats">Repeat accused</button>
+      </div>
+      <div id="viewBanner" class="banner">Linked = person connected to a FIR in this search. Repeat = same person has 2+ FIRs overall. Click a name for full history.</div>
+
+      <div class="intel-grid">
+        <aside class="card">
+          <h2>Result summary</h2>
+          <div id="summaryBox" class="summary">Waiting for search…</div>
+          <h3>AI analysis for officer</h3>
+          <div id="aiBox" class="ai-box">
+            <p class="muted">Ask a question — AI will analyse FIR results + SCRB real figures.</p>
+          </div>
+          <h3>Why this result</h3>
+          <ul id="reasonsList" class="reasons"></ul>
+          <div id="langBadge" class="pill hide"></div>
+          <div class="stats">
+            <div><b id="statMatches">—</b><span>Matched</span></div>
+            <div><b id="statHigh">—</b><span>HIGH</span></div>
+            <div><b id="statOpen">—</b><span>Open</span></div>
+            <div><b id="statRepeat">—</b><span>Repeat</span></div>
+          </div>
+        </aside>
+
+        <section class="card main">
+          <div id="viewTrend" class="view active">
+            <h2>Crime trend</h2>
+            <p id="trendCaption" class="muted">Month-wise case count</p>
+            <div class="chart-box"><canvas id="trendChart"></canvas></div>
+            <div id="trendDetails" class="note muted">No trend yet.</div>
+          </div>
+          <div id="viewMap" class="view">
+            <h2>Karnataka State Police — PS hotspots</h2>
+            <p class="muted">Real Karnataka + Bengaluru district boundaries (offline GeoJSON) · pin size = cases · click pin or Open in Maps</p>
+            <div class="map-zoom-bar" id="mapZoomBar">
+              <button type="button" class="btn zoom-btn active" data-zoom="state">Karnataka</button>
+              <button type="button" class="btn zoom-btn" data-zoom="blr">Bengaluru City</button>
+            </div>
+            <div id="hotspotBoard" class="hotspot-board" aria-label="Karnataka police station hotspot map"></div>
+            <ul id="stationList" class="list station-maps-list"></ul>
+          </div>
+          <div id="viewLinks" class="view">
+            <h2>Linked accused</h2>
+            <p class="muted">Person → FIR links in <b>this search only</b> (includes first-time accused). Click name for dossier.</p>
+            <div id="linkCards" class="stack"></div>
+          </div>
+          <div id="viewRepeats" class="view">
+            <h2>Repeat accused</h2>
+            <p class="muted">People with <b>2 or more FIRs</b> in the full register (priority list). Not the same as Linked.</p>
+            <div id="offenderCards" class="stack"></div>
+          </div>
+        </section>
+
+        <aside class="card fir-panel">
+          <h2>FIR list</h2>
+          <p class="muted">Matched FIRs for this search — click a row to open Case work</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>FIR</th><th>Type</th><th>PS</th><th>Sev</th><th>Status</th></tr></thead>
+              <tbody id="caseTableBody"><tr><td colspan="5" class="muted">No rows</td></tr></tbody>
+            </table>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CASE WORK -->
+    <section id="tab-cases" class="tab-panel">
+      <div class="desk-grid">
+        <div class="card">
+          <h2>Selected FIR</h2>
+          <label>FIR number</label>
+          <input id="deskFir" placeholder="2026/CCPSBL/0100" />
+          <label>Crime ID</label>
+          <input id="deskCrimeId" placeholder="C0001" />
+          <div id="deskCaseMeta" class="note">No FIR selected.</div>
+          <div id="deskContactBox" class="contact-inline hide"></div>
+          <div id="deskAccused" class="stack"></div>
+          <p id="deskPerm" class="muted"></p>
+        </div>
+        <div class="card">
+          <h2>Assign to IO <span class="tag">SHO / CI / DySP</span></h2>
+          <label>Officer</label>
+          <select id="assignOfficer"></select>
+          <label>Note</label>
+          <textarea id="assignNote" rows="3" placeholder="Priority / instructions…"></textarea>
+          <button type="button" class="btn primary" id="assignBtn">Assign</button>
+          <div id="assignMsg" class="note"></div>
+        </div>
+        <div class="card">
+          <h2>Update case status</h2>
+          <label>Status</label>
+          <select id="statusSelect"></select>
+          <label>Note</label>
+          <textarea id="statusNote" rows="3" placeholder="What was done…"></textarea>
+          <label>File name (optional)</label>
+          <input id="attachName" placeholder="bank_statement.pdf" />
+          <button type="button" class="btn primary" id="updateBtn">Save update</button>
+          <div id="updateMsg" class="note"></div>
+        </div>
+        <div class="card wide">
+          <h2>Case activity</h2>
+          <div id="ledgerList" class="stack ledger"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIELD DUTY -->
+    <section id="tab-field" class="tab-panel">
+      <div class="patrol-grid">
+        <div class="card">
+          <h2>Suggested patrol areas (from crime load)</h2>
+          <button type="button" class="btn primary" id="suggestBtn">Refresh suggestions</button>
+          <div id="suggestList" class="stack"></div>
+        </div>
+        <div class="card">
+          <h2>Create patrol duty <span class="tag">SHO / CI / DySP</span></h2>
+          <label>Area / beat</label>
+          <select id="dutyBeat"></select>
+          <label>Assign to officer</label>
+          <select id="dutyAssignee"></select>
+          <label>Duty date</label>
+          <input type="date" id="dutyDate" />
+          <label>Shift</label>
+          <select id="dutyShift">
+            <option>Morning</option>
+            <option selected>Evening / Night</option>
+            <option>24×7 check post</option>
+          </select>
+          <label>Priority</label>
+          <select id="dutyPriority">
+            <option>NORMAL</option>
+            <option>HIGH</option>
+          </select>
+          <label>Reason</label>
+          <textarea id="dutyReason" rows="2" placeholder="Why this area today…"></textarea>
+          <button type="button" class="btn primary" id="createDutyBtn">Create patrol duty</button>
+          <div id="dutyMsg" class="note"></div>
+        </div>
+        <div class="card">
+          <h2>Write patrol / field note</h2>
+          <label>Linked duty (optional)</label>
+          <select id="logDutySelect">
+            <option value="">— no linked duty —</option>
+          </select>
+          <label>Area</label>
+          <select id="logBeat"></select>
+          <label>What happened</label>
+          <select id="logType">
+            <option>General check</option>
+            <option>Suspicious person / vehicle</option>
+            <option>Address verification</option>
+            <option>Public information</option>
+            <option>Help to investigation</option>
+            <option>Crime prevention round</option>
+          </select>
+          <label>Details</label>
+          <textarea id="logDetail" rows="2" placeholder="Write what you saw…"></textarea>
+          <label>Action taken</label>
+          <input id="logAction" placeholder="Verified / informed IO / GD entry…" />
+          <label>Linked FIR (optional)</label>
+          <input id="logFir" placeholder="2026/…" />
+          <label>Update duty progress</label>
+          <select id="logDutyStatus">
+            <option value="">No change</option>
+            <option value="On Beat">On patrol now</option>
+            <option value="Completed">Duty completed</option>
+          </select>
+          <button type="button" class="btn primary" id="logBtn">Save patrol note</button>
+          <div id="logMsg" class="note"></div>
+        </div>
+        <div class="card wide">
+          <h2>Scheduled patrol duties</h2>
+          <div id="dutyList" class="stack"></div>
+        </div>
+        <div class="card wide">
+          <h2>Recent patrol notes</h2>
+          <div id="patrolLogList" class="stack ledger"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS / QUICK DIAL -->
+    <section id="tab-contacts" class="tab-panel">
+      <div class="contact-hero">
+        <div>
+          <h2>PS Quick Dial</h2>
+          <p class="muted">Bengaluru City Police contacts from official directory — Law &amp; Order · Traffic · Command</p>
+        </div>
+        <div id="contactCounts" class="contact-counts"></div>
+      </div>
+      <div class="contact-search-bar">
+        <input id="contactSearch" placeholder="Search station / division / DCP… e.g. Indiranagar, Whitefield, Control Room" />
+        <select id="contactType">
+          <option value="all">All</option>
+          <option value="station">Law &amp; Order PS</option>
+          <option value="traffic">Traffic</option>
+          <option value="senior">Senior / Command</option>
+        </select>
+        <button type="button" class="btn primary" id="contactSearchBtn">Search</button>
+      </div>
+      <div class="chips" id="contactChips">
+        <button type="button" data-cq="Indiranagar">Indiranagar</button>
+        <button type="button" data-cq="Whitefield">Whitefield</button>
+        <button type="button" data-cq="Jayanagar">Jayanagar</button>
+        <button type="button" data-cq="Yelahanka">Yelahanka</button>
+        <button type="button" data-cq="Koramangala">Koramangala</button>
+        <button type="button" data-cq="Electronic City">Electronic City</button>
+        <button type="button" data-cq="Control Room">Control Room</button>
+        <button type="button" data-cq="DCP East">DCP East</button>
+      </div>
+      <div id="contactGrid" class="contact-grid"></div>
+    </section>
+
+    <!-- DAILY REPORT -->
+    <section id="tab-report" class="tab-panel">
+      <div class="brief-toolbar">
+        <button type="button" class="btn primary" id="buildBriefBtn">Refresh report</button>
+        <button type="button" class="btn gold" id="exportBtn" disabled>Download PDF</button>
+      </div>
+      <div id="briefPreview" class="brief-preview">
+        <p class="muted">Run a search first, then refresh this report.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Accused history drawer -->
+  <div id="historyDrawer" class="drawer hide" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerCloseBg"></div>
+    <aside class="drawer-panel">
+      <header class="drawer-head">
+        <div>
+          <h2 id="histName">Accused</h2>
+          <p id="histMeta" class="muted"></p>
+        </div>
+        <button type="button" class="btn" id="drawerCloseBtn">Close</button>
+      </header>
+      <div id="histBody" class="drawer-body"></div>
+    </aside>
+  </div>
+
+  <div id="printReport" class="print-report" aria-hidden="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="config.js?v=prod19"></script>
+  <script src="app.js?v=prod19"></script>
+</body>
+</html>

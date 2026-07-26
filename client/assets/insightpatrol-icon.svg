@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e4a7a"/>
+      <stop offset="100%" style="stop-color:#0f2d4d"/>
+    </linearGradient>
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="56" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Shield -->
+  <path d="M 60 14 L 96 26 L 96 58 C 96 76 78 94 60 102 C 42 94 24 76 24 58 L 24 26 Z"
+        fill="url(#shieldGrad)" stroke="#0ea5e9" stroke-width="1.5"/>
+
+  <!-- Data network -->
+  <circle cx="38" cy="44" r="3.5" fill="#38bdf8"/>
+  <circle cx="60" cy="34" r="3.5" fill="#38bdf8"/>
+  <circle cx="82" cy="44" r="3.5" fill="#38bdf8"/>
+  <circle cx="60" cy="54" r="3.5" fill="#fbbf24"/>
+  <line x1="38" y1="44" x2="60" y2="34" stroke="#38bdf8" stroke-width="1.5" opacity="0.55"/>
+  <line x1="60" y1="34" x2="82" y2="44" stroke="#38bdf8" stroke-width="1.5" opacity="0.55"/>
+  <line x1="38" y1="44" x2="60" y2="54" stroke="#38bdf8" stroke-width="1.5" opacity="0.55"/>
+  <line x1="82" y1="44" x2="60" y2="54" stroke="#38bdf8" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- Eye -->
+  <ellipse cx="60" cy="66" rx="24" ry="14" fill="none" stroke="url(#eyeGrad)" stroke-width="2.5"/>
+  <circle cx="60" cy="66" r="9" fill="url(#eyeGrad)"/>
+  <circle cx="63" cy="63" r="2.8" fill="#e0f2fe"/>
+
+  <!-- Scan accent -->
+  <path d="M 42 78 L 78 78" stroke="url(#accentGrad)" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

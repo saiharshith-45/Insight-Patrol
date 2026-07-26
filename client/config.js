@@ -1,0 +1,41 @@
+/**
+ * InsightPatrol client config
+ */
+window.INSIGHTPATROL_CONFIG = {
+  FUNCTION_BASE:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function",
+  LOGIN_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/login",
+  QUERY_CRIME_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/queryCrime",
+  NETWORK_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/networkAnalysis",
+  INVESTIGATE_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/investigate",
+  ACCUSED_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/accusedHistory",
+  HEALTH_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/health",
+  CASE_DESK_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/caseDesk",
+  ASSIGN_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/assignCase",
+  UPDATE_CASE_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/updateCase",
+  PATROL_DESK_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/patrolDesk",
+  CREATE_DUTY_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/createPatrolDuty",
+  PATROL_LOG_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/addPatrolLog",
+  PATROL_SUGGEST_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/patrolSuggest",
+  BEAT_OFFICERS_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/beatOfficers",
+  SCRB_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/scrbStats",
+  CONTACTS_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/contacts",
+  MATCH_CONTACT_URL:
+    "https://insight-patrol-60079903362.development.catalystserverless.in/server/insight_patrol_function/matchContact",
+};

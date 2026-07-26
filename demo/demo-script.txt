@@ -1,0 +1,21 @@
+InsightPatrol — 3 minute demo
+=============================
+
+Login: sho.prakash / Ksp@2026
+App: Catalyst hosted InsightPatrol
+
+0:00–0:25  Login. Say we built this on Zoho Catalyst for KSP datathon.
+
+0:25–1:00  Search: pending cases in jayanagar ps
+           Show briefing + FIR list.
+
+1:00–1:35  PS hotspots → Karnataka → Bengaluru City
+           Click Open in Maps once.
+
+1:35–2:20  Repeat accused → open a name → open one FIR in Case work.
+
+2:20–2:50  Patrol → refresh suggestions → Navigate / create duty.
+
+2:50–3:00  Stop on deployed URL. Done.
+
+If screen looks cached: private window or Ctrl+F5.

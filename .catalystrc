@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "46505000000013048",
+      "name": "Insight-Patrol",
+      "domain": {
+        "id": "50044324024",
+        "name": "insight-patrol-60079903362.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60079903362",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

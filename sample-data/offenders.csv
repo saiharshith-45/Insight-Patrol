@@ -1,0 +1,13 @@
+offender_id,name,age,repeat_flag,alias,native_place
+O001,Ravi Kumar,34,true,RK,Tumkur
+O002,Suresh M,28,true,Suri,Bengaluru
+O003,Anil Prasad,41,false,,Mysuru
+O004,Kiran Shetty,31,true,KS,Mangaluru
+O005,Manoj D,26,false,,Hubballi
+O006,Naveen Gowda,29,true,NG,Mandya
+O007,Imran Pasha,36,true,IP,Bengaluru
+O008,Deepak Rao,33,false,,Belagavi
+O009,Sathish H,45,true,SH,Davanagere
+O010,Venkatesh B,38,false,,Bengaluru
+O011,Farhan Ali,27,true,FA,Shivajinagar
+O012,Prakash N,42,false,,Whitefield

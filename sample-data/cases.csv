@@ -1,0 +1,39 @@
+case_id,crime_id,offender_id,io_rank,stage
+CS0001,C0001,O001,PSI,Charge Sheet Filed
+CS0002,C0002,O002,PSI,Under Investigation
+CS0003,C0003,O004,PSI,Under Investigation
+CS0004,C0004,O006,PSI,Under Investigation
+CS0005,C0005,O007,PSI,Under Investigation
+CS0006,C0006,O011,PSI,Charge Sheet Filed
+CS0007,C0007,O001,PSI,Under Investigation
+CS0008,C0008,O002,PSI,Under Investigation
+CS0009,C0009,O006,PSI,Under Investigation
+CS0010,C0010,O007,PSI,Under Investigation
+CS0011,C0011,O001,PSI,Charge Sheet Filed
+CS0012,C0012,O002,PSI,Under Investigation
+CS0013,C0013,O004,PSI,Under Investigation
+CS0014,C0014,O006,PSI,Under Investigation
+CS0015,C0015,O007,PSI,Under Investigation
+CS0016,C0016,O011,PSI,Charge Sheet Filed
+CS0017,C0017,O001,PSI,Under Investigation
+CS0018,C0018,O002,PSI,Under Investigation
+CS0019,C0019,O006,PSI,Under Investigation
+CS0020,C0020,O007,PSI,Under Investigation
+CS0021,C0021,O006,PSI,Under Investigation
+CS0022,C0022,O010,PSI,Under Investigation
+CS0023,C0023,O006,PSI,Under Investigation
+CS0024,C0024,O012,PSI,Under Investigation
+CS0025,C0025,O010,PSI,Under Investigation
+CS0026,C0026,O006,PSI,Under Investigation
+CS0027,C0027,O007,PSI,Under Investigation
+CS0028,C0028,O011,PSI,Under Investigation
+CS0029,C0029,O007,PSI,Under Investigation
+CS0030,C0030,O003,PSI,Under Investigation
+CS0031,C0031,O011,PSI,Under Investigation
+CS0032,C0032,O003,PSI,Under Investigation
+CS0033,C0033,O003,PSI,Under Investigation
+CS0034,C0034,O004,PSI,Under Investigation
+CS0035,C0035,O005,PSI,Charge Sheet Filed
+CS0036,C0036,O008,PSI,Under Investigation
+CS0037,C0037,O009,PSI,Under Investigation
+CS0038,C0038,O009,PI,Under Investigation
